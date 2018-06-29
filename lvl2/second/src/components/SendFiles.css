@@ -1,0 +1,14 @@
+button.btn-send-files {
+  background-color: transparent;
+  color: rgb(180, 77, 87);
+  border: none;
+  border-radius: 3px;
+  padding: 1em;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+button.btn-send-files:hover {
+  color: white;
+  background-color: rgb(180, 77, 87);
+}

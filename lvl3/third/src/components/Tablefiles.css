@@ -1,0 +1,47 @@
+div.table-files {
+  width: auto;
+  padding: 2em;
+  margin: 0 1em;
+  box-shadow: 0px 1px 10px 0px #686963;
+  background-color: #FAFAFA;
+  border-radius: 0 0 5px 5px;
+}
+
+div.table-files table {
+  box-sizing: border-box;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+div.table-files tr {
+  white-space:nowrap;
+  text-align: center;
+}
+
+div.table-files th {
+  background: linear-gradient(#FAFAFA, #7B9EA8);
+  padding: 10px 0;
+}
+
+div.table-files td {
+  border-bottom: 1px dashed silver;
+  padding: 1em;
+}
+
+button.btn-form-remove {
+  color: #FAFAFA;
+  background-color: rgb(180, 77, 87);
+  border: none;
+  font-size: 2vh;
+  padding: 7px;
+  border-radius: 1px;
+}
+
+td.cell-status {
+  font-size: 13px;
+}
+
+button.btn-form-remove:hover {
+  color: white;
+  background-color: rgb(238, 39, 59);
+}

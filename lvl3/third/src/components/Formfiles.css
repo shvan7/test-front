@@ -1,0 +1,43 @@
+div.block-form-files {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0em 1em;
+  padding: 0.2em 0.2em 0.2em 1em;
+  box-shadow: 0px 1px 10px 0px #686963;
+  background-color: #FAFAFA;
+  border-radius: 5px 5px 0 0;
+}
+
+label.label-form-files:after {
+  content: " \2B06";
+}
+
+label.label-form-files {
+  border-right: 1px solid silver; 
+  padding: 1em;
+  cursor: pointer;
+  color: #00b1ca;
+  font-weight: bold;
+}
+
+label.label-form-files:hover {
+  color: #17cde6;
+}
+
+input.input-form-files {
+  display: none;
+}
+
+div.second-block-form-files {
+  display: flex;
+  align-items: center;
+}
+
+p.info-storage {
+  color: #00b1ca;
+  margin: 0;
+  padding: 1em;
+  margin-right: 3em;
+  font-weight: bold;
+}

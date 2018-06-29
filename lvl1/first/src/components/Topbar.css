@@ -1,0 +1,9 @@
+div.bar {
+  width: 100%;
+  position: fixed;
+  top:0;
+  line-height: 1em;
+  background-color: #7B9EA8;
+  color: #FAFAFA;
+  box-shadow: 0px 2px 10px 0px #656565;
+}

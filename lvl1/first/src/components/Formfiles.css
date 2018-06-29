@@ -1,0 +1,28 @@
+div.block-form-files {
+  display: flex;
+  padding: 1em;
+  margin: 0 1em;
+  box-shadow: 0px 1px 10px 0px #686963;
+  background-color: #FAFAFA;
+  border-radius: 5px 5px 0 0;
+}
+
+label.label-form-files:after {
+  content: " \2B06";
+}
+
+label.label-form-files {
+  border-right: 1px solid silver; 
+  padding: 1em;
+  cursor: pointer;
+  color: #00b1ca;
+  font-weight: bold;
+}
+
+label.label-form-files:hover {
+  color: #17cde6;
+}
+
+input.input-form-files {
+  display: none;
+}
