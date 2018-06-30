@@ -2,13 +2,16 @@ import { createStore } from 'redux'
 
 const initialState = {
   fileList: [],
-  api: []
+  api: [],
+  obj: []
 }
 
 const reducer = (state = initialState, actions) => {
   switch (actions.type) {
     case 'GET_API':
       return { ...state, api: actions.api }
+    case 'ITEM_UPLOAD':
+      return { ...state, obj: [ actions.obj, ...state.obj ] }
     case 'ADD_LIST':
       return { ...state, fileList: state.fileList.concat(actions.fileList) }
     case 'REMOVE_FILE':
@@ -26,7 +29,8 @@ export const actions = {
       .then(data => store.dispatch({ type: 'GET_API', api: data }))
   },
   addList: (list) => store.dispatch({ type: 'ADD_LIST', fileList: list }),
-  removeFile: (id) => store.dispatch({ type: 'REMOVE_FILE', index: id })
+  removeFile: (id) => store.dispatch({ type: 'REMOVE_FILE', index: id }),
+  itemUpload: (obj) => store.dispatch({ type: 'ITEM_UPLOAD', obj: obj }),
 }
 
 export const store = createStore(reducer)

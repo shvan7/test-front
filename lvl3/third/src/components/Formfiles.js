@@ -7,7 +7,6 @@ import './Formfiles.css'
 
 const addingState = (evt) => {
   const obj = evt.target.files
-  console.log(obj)
   const list = Object.keys(obj).map(e => obj[e])
   actions.addList(list)
 }

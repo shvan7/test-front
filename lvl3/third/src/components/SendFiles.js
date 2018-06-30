@@ -3,19 +3,26 @@ import { store, actions } from '../reduce/reducer'
 // css
 import './SendFiles.css'
 
-const getElemt = (e, res) => {
-  const elemt = document.getElementById(e)
+const getElemt = (res, i) => {
+  actions.removeFile(i)
   if (res.ok) actions.getApi()
-  elemt.innerHTML = res.ok ? '\u2714' : 'error'
-  elemt.style.color = res.ok ? '#32CD32' : '#FF4500'
-  elemt.style.fontSize = '20px'
+}
+
+const createObjStatus = (e, res) => {
+  const obj = {
+    status: res.ok,
+    name: e.name,
+    date: Date.now()
+  }
+  actions.itemUpload(obj)
 }
 
 const submitFiles = () => {
   store.getState().fileList.forEach((e, i) => {
     fetch('https://fhirtest.uhn.ca/baseDstu3/Binary', { method: 'POST', body: e })
       .then(res => {
-        getElemt(`table-files-status-${i}`, res)
+        getElemt(res, i)
+        createObjStatus(e, res)
       })
       .catch(e => console.log('Error', e))
   })

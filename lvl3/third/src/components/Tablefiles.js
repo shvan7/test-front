@@ -4,7 +4,7 @@ import { actions } from '../reduce/reducer'
 import './Tablefiles.css'
 
 const Tablefiles = ({ store }) =>
-  <div className="table-files">
+  <div style={{ marginLeft: '1em' }} className="table-files">
     <table>
       <thead>
         <tr>
@@ -20,7 +20,7 @@ const Tablefiles = ({ store }) =>
           <tr key={`${i}line-table`}>
             <td><button className="btn-form-remove" onClick={() => actions.removeFile(i)}>Remove</button></td>
             <td>{e.name}</td>
-            <td>{e.type.split('/')[1].split('.', 2)}</td>
+            <td>{e.name.split('.')[1]}</td>
             <td>{Math.round(e.size / 1000) / 100} mb</td>
             <td className="cell-status" id={`table-files-status-${i}`}>added</td>
           </tr>
