@@ -22,7 +22,7 @@ class App extends Component {
       <React.Fragment>
         <Topbar />
         < Router >
-          <ListFiles store={this.state} path="/" />
+          <ListFiles store={this.state} path="/test-front" />
           <UploadFiles store={this.state} path="/upload-page" />
         </Router >
       </React.Fragment>

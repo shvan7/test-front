@@ -4,7 +4,7 @@ import { store, actions } from '../reduce/reducer'
 import './SendFiles.css'
 
 const getElemt = (res, i) => {
-  actions.removeFile(i)
+  actions.delList()
   if (res.ok) actions.getApi()
 }
 
