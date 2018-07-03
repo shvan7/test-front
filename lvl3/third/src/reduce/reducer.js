@@ -25,11 +25,10 @@ const reducer = (state = initialState, actions) => {
 }
 
 export const actions = {
-  getApi: () => {
+  getApi: () =>
     fetch('https://fhirtest.uhn.ca/baseDstu3/Binary')
       .then(res => res.json())
-      .then(data => store.dispatch({ type: 'GET_API', api: data }))
-  },
+      .then(data => store.dispatch({ type: 'GET_API', api: data })),
   addList: (list) => store.dispatch({ type: 'ADD_LIST', fileList: list }),
   removeFile: (id) => store.dispatch({ type: 'REMOVE_FILE', index: id }),
   itemUpload: (obj) => store.dispatch({ type: 'ITEM_UPLOAD', obj: obj }),

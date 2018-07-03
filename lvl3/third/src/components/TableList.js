@@ -17,7 +17,7 @@ const TableList = ({ store }) =>
             <tr key={i}>
               <td>{i + 1}</td>
               <td>{e.resource.id}</td>
-              <td>{e.resource.contentType.split('/')[1].split('.')[0]}</td>
+              <td>{e.resource.contentType ? e.resource.contentType.split('/')[1].split('.')[0] : 'NOTHING'}</td>
               <td>
                 <a
                   href={`https://fhirtest.uhn.ca/baseDstu3/Binary/${e.resource.id}`}
